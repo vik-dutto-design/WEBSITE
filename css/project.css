@@ -1,0 +1,349 @@
+/* ===== Project detail pages ===== */
+
+.project-page {
+  background: #000;
+}
+
+.project-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding-bottom: 1rem;
+}
+
+.project-back {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+
+.project-back:hover { color: #fff; }
+
+/* Layout generale */
+.project-case {
+  padding:
+    clamp(2rem, 5.5vw, 106px)
+    clamp(1.5rem, 7.3vw, 141px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vw, 120px);
+}
+
+.project-frame {
+  width: 100%;
+  max-width: 1637px;
+  margin: 0 auto;
+}
+
+.project-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Blocchi testo (LOGO, KINETIC WALL) ===== */
+.project-block {
+  max-width: 1637px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project-block__title {
+  margin: 0 0 clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.project-block__copy {
+  max-width: 1100px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+}
+
+.project-block__copy p {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.8125rem, 1.2vw, 0.9375rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.project-block__copy--two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ===== Griglia LOGO (come Figma) ===== */
+.project-logo-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: clamp(0.375rem, 0.8vw, 10px);
+}
+
+.project-logo-grid__wide,
+.project-logo-grid__mask,
+.project-logo-grid__inspiration {
+  min-height: clamp(180px, 22vw, 320px);
+}
+
+.project-logo-grid__wide img,
+.project-logo-grid__mask img,
+.project-logo-grid__colours img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-logo-grid__mask {
+  overflow: hidden;
+  background: #000;
+}
+
+.project-logo-grid__mask-crop {
+  width: 200% !important;
+  max-width: none !important;
+  object-position: left center;
+}
+
+.project-logo-grid__colours {
+  grid-column: 1 / -1;
+  margin-top: clamp(0.375rem, 0.8vw, 10px);
+}
+
+/* Pannello Inspiration (bianco) */
+.project-logo-grid__inspiration {
+  background: #fff;
+  color: #000;
+  padding: clamp(1rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-inspiration__icon {
+  width: clamp(50px, 8vw, 90px);
+  margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.project-inspiration__icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-inspiration__text {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  line-height: 1.55;
+  max-width: 16rem;
+}
+
+.project-inspiration__label {
+  margin: auto 0 0 auto;
+  padding-top: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  font-weight: 700;
+  align-self: flex-end;
+}
+
+/* ===== Stack immagini Kinetic Wall ===== */
+.project-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.375rem, 0.8vw, 10px);
+}
+
+/* ===== Navigazione tra progetti ===== */
+.project-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 3rem clamp(1.5rem, 7.3vw, 141px) 5rem;
+  max-width: calc(1637px + 282px);
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-nav__link {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+
+.project-nav__link:hover { color: #fff; }
+
+.project-nav__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .project-block__copy--two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .project-logo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-logo-grid__wide {
+    grid-column: 1 / -1;
+  }
+
+  .project-logo-grid__mask-crop {
+    width: 100% !important;
+    object-position: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-logo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-block__copy p {
+    text-align: left;
+  }
+
+  .project-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-nav__link--prev,
+  .project-nav__link--next {
+    flex: 1 1 100%;
+  }
+
+  .project-nav__label {
+    order: -1;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===== Progetti semplici (P2, ecc.) — titolo + testo + 1 immagine ===== */
+
+.project-block--simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-block__title--stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  line-height: 1.05;
+  text-transform: none;
+}
+
+.project-block__title--stacked span {
+  display: block;
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
+  font-weight: 900;
+}
+
+.project-block__copy--single {
+  max-width: 42rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.project-block__copy--single p {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .project-block__copy--single p {
+    text-align: left;
+  }
+}
+
+/* ===== Progetti allineati a sinistra (P4, ecc.) ===== */
+
+.project-block--left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1637px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project-block__title--left {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.project-block__copy--left {
+  max-width: 36rem;
+  margin: 0 0 clamp(2.5rem, 5vw, 4rem);
+}
+
+.project-block__copy--left p {
+  text-align: left;
+  margin: 0 0 0.75em;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.8125rem, 1.2vw, 0.9375rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.project-block__copy--left p:last-child {
+  margin-bottom: 0;
+}
+
+.project-block--left .project-stack {
+  width: 100%;
+}
+
+/* Titolo mixed-case (P6 — non uppercase) */
+.project-block__title--mixed {
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.project-block__title--mixed span {
+  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+/* Sottotitolo progetti (P12) */
+.project-block__subtitle {
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.project-block__title--left.project-block__title--stacked span {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+}

@@ -1,0 +1,308 @@
+/* ============================================================
+   SLOWFUTURE — Responsive layer
+   Solo @media: il desktop (>1024px) resta invariato
+   ============================================================ */
+
+/* ----- Tablet (≤1024px) ----- */
+@media (max-width: 1024px) {
+  .project-case {
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+
+  .project-block__title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+  }
+
+  .project-block__title--stacked span,
+  .project-block__title--left.project-block__title--stacked span {
+    font-size: clamp(1.75rem, 4.5vw, 3rem);
+  }
+
+  .project-block__title--mixed span {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .project-nav {
+    padding-left: clamp(1.25rem, 4vw, 3rem);
+    padding-right: clamp(1.25rem, 4vw, 3rem);
+  }
+}
+
+/* ----- Mobile (≤767px) ----- */
+@media (max-width: 767px) {
+  /* Nav + header progetto */
+  .navbar {
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 0;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__link {
+    display: none;
+    width: 100%;
+    padding: 0.65rem 0;
+    font-size: 1.125rem;
+  }
+
+  .navbar--open {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  .navbar--open .navbar__link {
+    display: block;
+  }
+
+  .project-header {
+    padding-bottom: 0.75rem;
+  }
+
+  .project-header .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-back {
+    margin-top: 1rem;
+  }
+
+    /* Home: hero alto solo in index (NON works/contact/progetti) */
+  .site-header:not(.site-header--compact) {
+    min-height: 60vh;
+  }
+
+  /* Works, Contact, pagine progetto: header compatto */
+  .site-header.site-header--compact {
+    min-height: auto;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Progetti: niente sticky semitrasparente che copre il contenuto */
+  .site-header.site-header--compact.project-header {
+    position: relative;
+    top: auto;
+    background: #000;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .hero-logo img {
+    width: min(100%, 520px);
+  }
+
+  .hero-text,
+  .platform,
+  .works,
+  .page-works,
+  .page-contact {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .works__title,
+  .page-works__title,
+  .page-contact__title {
+    margin-bottom: 1.25rem;
+  }
+
+  .page-works__intro {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Anteprima works in home: niente crop aggressivo */
+  .works__item img {
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .works__gallery {
+    gap: 2.5rem;
+  }
+
+  /* Pagine progetto */
+  .project-case {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 2.5rem;
+  }
+
+  .project-block__title {
+    text-align: left;
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    margin-bottom: 1.25rem;
+    overflow-wrap: anywhere;
+  }
+
+  .project-block__title--stacked span,
+  .project-block__title--left.project-block__title--stacked span {
+    font-size: clamp(1.5rem, 7vw, 2.25rem);
+  }
+
+  .project-block__title--mixed span {
+    font-size: clamp(1.375rem, 6.5vw, 2rem);
+  }
+
+  .project-block--simple {
+    align-items: flex-start;
+  }
+
+  .project-block__copy,
+  .project-block__copy--left,
+  .project-block__copy--single {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .project-block__copy p,
+  .project-block__copy--left p,
+  .project-block__copy--single p {
+    text-align: left;
+  }
+
+  .project-block__subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-stack {
+    gap: 0.5rem;
+  }
+
+  .project-frame {
+    max-width: 100%;
+  }
+
+  .project-frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Griglia P1 */
+  .project-logo-grid__wide,
+  .project-logo-grid__mask,
+  .project-logo-grid__inspiration {
+    min-height: 160px;
+  }
+
+  .project-inspiration__label {
+    align-self: flex-start;
+  }
+
+  /* Nav tra progetti */
+  .project-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 2rem 1.25rem 3rem;
+    text-align: center;
+  }
+
+  .project-nav__label {
+    order: -1;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .project-nav__link {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .project-nav__link--prev,
+  .project-nav__link--next {
+    flex: 1 1 100%;
+  }
+
+  /* Contact */
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-form__field input,
+  .contact-form__field textarea {
+    font-size: 16px;
+  }
+
+  .cta-button--submit {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .site-footer__social {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .hero-text__title,
+  .hero-text__body,
+  .platform__statement {
+    text-align: left;
+  }
+}
+
+/* ----- Small phones (≤480px) ----- */
+@media (max-width: 480px) {
+  .navbar__link {
+    font-size: 1rem;
+  }
+
+  .project-block__title--stacked span,
+  .project-block__title--left.project-block__title--stacked span {
+    font-size: clamp(1.25rem, 6.5vw, 1.75rem);
+    line-height: 1.08;
+  }
+
+  .hero-text__title {
+    font-size: 1.375rem;
+  }
+
+  .platform__statement {
+    font-size: 1.375rem;
+  }
+}
+
+/* ----- Safe area iPhone (notch) ----- */
+@supports (padding: max(0px)) {
+  @media (max-width: 767px) {
+    .navbar,
+    .project-case,
+    .project-nav,
+    .site-footer {
+      padding-left: max(1.25rem, env(safe-area-inset-left));
+      padding-right: max(1.25rem, env(safe-area-inset-right));
+    }
+
+    .site-footer {
+      padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
+    }
+  }
+}
