@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Slow Future</title>
+  <meta name="description" content="Get in touch with Slow Future studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header site-header--compact">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="navbar__link" href="index.html">Home</a>
+      <a class="navbar__link" href="works.html">Works</a>
+      <a class="navbar__link navbar__link--active" href="contact.html" aria-current="page">Contact</a>
+
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content" class="page-contact">
+    <div class="container">
+      <h1 class="page-contact__title reveal">Contact</h1>
+      <p class="page-contact__intro reveal">Drop us a line — we'd love to hear from you.</p>
+
+      <form class="contact-form reveal" action="#" method="post">
+        <div class="contact-form__field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="contact-form__field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="contact-form__field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button class="cta-button cta-button--submit" type="submit">Send message</button>
+      </form>
+
+      <p class="page-contact__email reveal">
+        Or write to us at
+        <a href="mailto:hello@slowfuture.org">info@slowfuture.org</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a href="index.html" class="site-footer__logo-link">
+        <img class="site-footer__logo" src="asset/images/home/logo.png" alt="Slow — Future" width="285" height="32">
+      </a>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="#">Features</a>
+        <a href="#">Learn more</a>
+        <a href="#">Support</a>
+      </nav>
+
+      <ul class="site-footer__social" role="list" aria-label="Social media">
+        <li><a href="https://www.instagram.com/slow.future?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a></li>
+        <li><a href="mailto:info@slowfuture.org" aria-label="Email">@</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
