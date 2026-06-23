@@ -491,3 +491,9 @@ h1, h2, p { margin: 0; }
 .works__link figure {
   margin: 0;
 }
+
+.site-footer__icon {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+}
